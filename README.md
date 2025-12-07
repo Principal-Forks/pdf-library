@@ -38,11 +38,17 @@ This will:
 ### CLI
 
 ```bash
-# Add a PDF
+# Add a PDF from local path
 bun run dev add /path/to/document.pdf
+
+# Add from URL
+bun run dev add https://example.com/paper.pdf
 
 # Add with tags
 bun run dev add /path/to/document.pdf --tags "ai,agents"
+
+# Add from URL with custom title
+bun run dev add https://example.com/paper.pdf --title "Research Paper" --tags "research"
 
 # Search semantically
 bun run dev search "context engineering patterns"
@@ -56,14 +62,20 @@ bun run dev list
 # List by tag
 bun run dev list --tag ai
 
-# Read extracted content
-bun run dev read "document-title"
+# Get document details
+bun run dev get "document-title"
 
 # Remove a document
 bun run dev remove "document-title"
 
+# Update tags
+bun run dev tag "document-title" "new,tags,here"
+
 # Show stats
 bun run dev stats
+
+# Check Ollama status
+bun run dev check
 ```
 
 ### As a library
@@ -115,6 +127,7 @@ Environment variables:
 ```
 ~/Documents/.pdf-library/
 ├── library.db          # SQLite database (vectors, FTS, metadata)
+├── downloads/          # PDFs downloaded from URLs
 ├── extracted/          # Markdown versions of PDFs (optional)
 └── originals/          # Copy of original PDFs (optional)
 ```
