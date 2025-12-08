@@ -1,0 +1,58 @@
+version: "1.0.0"
+name: "PDF Library Architecture"
+
+nodeComponents:
+  PDFLibrary:
+    type: "service"
+    description: "Main PDF Library service that composes all dependencies"
+    color: "#4F46E5"
+    icon: "📚"
+    
+  Database:
+    type: "service"
+    description: "PGlite database service with pgvector for vector search"
+    color: "#059669"
+    icon: "🗄️"
+    
+  Ollama:
+    type: "service"
+    description: "Ollama service for embeddings generation"
+    color: "#DC2626"
+    icon: "🤖"
+    
+  PDFExtractor:
+    type: "service"
+    description: "PDF text extraction and chunking service"
+    color: "#7C3AED"
+    icon: "📄"
+    
+  CLI:
+    type: "interface"
+    description: "Command line interface for PDF library operations"
+    color: "#EA580C"
+    icon: "💻"
+    
+  Config:
+    type: "config"
+    description: "Library configuration and environment variables"
+    color: "#0891B2"
+    icon: "⚙️"
+
+edgeComponents:
+  depends_on:
+    type: "dependency"
+    description: "Service dependency"
+    color: "#6B7280"
+    style: "solid"
+    
+  uses:
+    type: "usage"
+    description: "Service usage relationship"
+    color: "#3B82F6"
+    style: "dashed"
+    
+  configures:
+    type: "configuration"
+    description: "Configuration relationship"
+    color: "#F59E0B"
+    style: "dotted"
