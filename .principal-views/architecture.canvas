@@ -1,56 +1,7 @@
 {
-  "vv": {
+  "pv": {
     "name": "PDF Library Architecture",
-    "version": "1.0.0",
-    "nodeTypes": {
-      "CLI": {
-        "color": "#EA580C",
-        "icon": "💻",
-        "description": "Command line interface"
-      },
-      "PDFLibrary": {
-        "color": "#4F46E5",
-        "icon": "📚",
-        "description": "Main PDF Library service"
-      },
-      "Config": {
-        "color": "#0891B2",
-        "icon": "⚙️",
-        "description": "Configuration settings"
-      },
-      "Database": {
-        "color": "#059669",
-        "icon": "🗄️",
-        "description": "Database service"
-      },
-      "Ollama": {
-        "color": "#DC2626",
-        "icon": "🤖",
-        "description": "Ollama AI service"
-      },
-      "PDFExtractor": {
-        "color": "#7C3AED",
-        "icon": "📄",
-        "description": "PDF extraction service"
-      }
-    },
-    "edgeTypes": {
-      "uses": {
-        "color": "#3B82F6",
-        "style": "dashed",
-        "description": "Uses relationship"
-      },
-      "configures": {
-        "color": "#F59E0B",
-        "style": "dotted",
-        "description": "Configuration relationship"
-      },
-      "depends_on": {
-        "color": "#6B7280",
-        "style": "solid",
-        "description": "Dependency relationship"
-      }
-    }
+    "version": "1.0.0"
   },
   "nodes": [
     {
@@ -60,7 +11,7 @@
       "y": -12,
       "width": 120,
       "height": 60,
-      "vv": {
+      "pv": {
         "nodeType": "CLI",
         "shape": "rectangle"
       },
@@ -73,7 +24,7 @@
       "y": 105,
       "width": 140,
       "height": 60,
-      "vv": {
+      "pv": {
         "nodeType": "PDFLibrary",
         "shape": "rectangle"
       },
@@ -86,7 +37,7 @@
       "y": 235,
       "width": 120,
       "height": 60,
-      "vv": {
+      "pv": {
         "nodeType": "Config",
         "shape": "rectangle"
       },
@@ -99,7 +50,7 @@
       "y": 232,
       "width": 140,
       "height": 60,
-      "vv": {
+      "pv": {
         "nodeType": "Database",
         "shape": "rectangle"
       },
@@ -112,7 +63,7 @@
       "y": 232,
       "width": 120,
       "height": 60,
-      "vv": {
+      "pv": {
         "nodeType": "Ollama",
         "shape": "rectangle"
       },
@@ -125,7 +76,7 @@
       "y": 229,
       "width": 120,
       "height": 60,
-      "vv": {
+      "pv": {
         "nodeType": "PDFExtractor",
         "shape": "rectangle"
       },
@@ -137,31 +88,41 @@
       "id": "cli-to-library",
       "fromNode": "cli",
       "toNode": "pdf-library",
-      "type": "uses"
+      "pv": {
+        "edgeType": "uses"
+      }
     },
     {
       "id": "library-to-config",
       "fromNode": "pdf-library",
       "toNode": "config",
-      "type": "configures"
+      "pv": {
+        "edgeType": "configures"
+      }
     },
     {
       "id": "library-to-database",
       "fromNode": "pdf-library",
       "toNode": "database",
-      "type": "depends_on"
+      "pv": {
+        "edgeType": "depends_on"
+      }
     },
     {
       "id": "library-to-ollama",
       "fromNode": "pdf-library",
       "toNode": "ollama",
-      "type": "depends_on"
+      "pv": {
+        "edgeType": "depends_on"
+      }
     },
     {
       "id": "library-to-extractor",
       "fromNode": "pdf-library",
       "toNode": "pdf-extractor",
-      "type": "depends_on"
+      "pv": {
+        "edgeType": "depends_on"
+      }
     }
   ]
 }
