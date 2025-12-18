@@ -7,80 +7,80 @@
     {
       "id": "cli",
       "type": "text",
-      "x": 401,
-      "y": -12,
+      "x": 266,
+      "y": -95,
       "width": 120,
       "height": 60,
       "pv": {
         "nodeType": "CLI",
         "shape": "rectangle"
       },
-      "text": "CLI Interface"
+      "text": "CLI\n💻"
     },
     {
       "id": "pdf-library",
       "type": "text",
-      "x": 392,
-      "y": 105,
+      "x": 248,
+      "y": 30,
       "width": 140,
       "height": 60,
       "pv": {
         "nodeType": "PDFLibrary",
         "shape": "rectangle"
       },
-      "text": "PDF Library Service"
+      "text": "PDF Library\n📚"
     },
     {
       "id": "config",
       "type": "text",
-      "x": 172,
-      "y": 235,
+      "x": 145,
+      "y": 161,
       "width": 120,
       "height": 60,
       "pv": {
         "nodeType": "Config",
         "shape": "rectangle"
       },
-      "text": "Configuration"
+      "text": "Config\n⚙️"
     },
     {
       "id": "database",
       "type": "text",
-      "x": 311,
-      "y": 232,
+      "x": 258,
+      "y": 159,
       "width": 140,
       "height": 60,
       "pv": {
         "nodeType": "Database",
         "shape": "rectangle"
       },
-      "text": "Database (PGlite)"
+      "text": "Database\n🗄️"
     },
     {
       "id": "ollama",
       "type": "text",
-      "x": 473,
-      "y": 232,
+      "x": 375,
+      "y": 157,
       "width": 120,
       "height": 60,
       "pv": {
         "nodeType": "Ollama",
         "shape": "rectangle"
       },
-      "text": "Ollama Service"
+      "text": "Ollama\n🤖"
     },
     {
       "id": "pdf-extractor",
       "type": "text",
-      "x": 618,
-      "y": 229,
+      "x": 485,
+      "y": 155,
       "width": 120,
       "height": 60,
       "pv": {
         "nodeType": "PDFExtractor",
         "shape": "rectangle"
       },
-      "text": "PDF Extractor"
+      "text": "PDF Extractor\n📄"
     }
   ],
   "edges": [
@@ -88,6 +88,8 @@
       "id": "cli-to-library",
       "fromNode": "cli",
       "toNode": "pdf-library",
+      "fromSide": "bottom",
+      "toSide": "top",
       "pv": {
         "edgeType": "uses"
       }
@@ -96,6 +98,8 @@
       "id": "library-to-config",
       "fromNode": "pdf-library",
       "toNode": "config",
+      "fromSide": "bottom",
+      "toSide": "top",
       "pv": {
         "edgeType": "configures"
       }
@@ -104,6 +108,8 @@
       "id": "library-to-database",
       "fromNode": "pdf-library",
       "toNode": "database",
+      "fromSide": "bottom",
+      "toSide": "top",
       "pv": {
         "edgeType": "depends_on"
       }
@@ -112,6 +118,8 @@
       "id": "library-to-ollama",
       "fromNode": "pdf-library",
       "toNode": "ollama",
+      "fromSide": "bottom",
+      "toSide": "top",
       "pv": {
         "edgeType": "depends_on"
       }
@@ -120,6 +128,8 @@
       "id": "library-to-extractor",
       "fromNode": "pdf-library",
       "toNode": "pdf-extractor",
+      "fromSide": "bottom",
+      "toSide": "top",
       "pv": {
         "edgeType": "depends_on"
       }

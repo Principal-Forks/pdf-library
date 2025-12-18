@@ -1,0 +1,116 @@
+{
+  "metadata": {
+    "timestamp": "2025-12-15T01:25:33.449Z",
+    "version": "1.0.0",
+    "totalPackages": 1,
+    "totalLenses": 2,
+    "git": {
+      "commit": "289b73d98c04a16e6788a1a83217fb98c5666152",
+      "branch": "main",
+      "repository": "Principal-Forks/pdf-library"
+    }
+  },
+  "results": [
+    {
+      "package": {
+        "name": "pdf-brain",
+        "path": ""
+      },
+      "lens": {
+        "id": "test",
+        "command": "test"
+      },
+      "execution": {
+        "success": true,
+        "exitCode": 0,
+        "duration": 10728,
+        "timestamp": 1765761932687
+      },
+      "issues": [],
+      "metrics": {
+        "filesAnalyzed": 0,
+        "totalIssues": 0,
+        "issuesBySeverity": {
+          "error": 0,
+          "warning": 0,
+          "info": 0,
+          "hint": 0
+        },
+        "executionTime": 0,
+        "custom": {
+          "totalTests": 0,
+          "passedTests": 0,
+          "failedTests": 0,
+          "skippedTests": 0,
+          "testSuites": 0,
+          "passedSuites": 0,
+          "failedSuites": 0,
+          "passRate": 0,
+          "duration": 0,
+          "slowestTests": [],
+          "snapshot": {
+            "total": 0,
+            "matched": 0,
+            "unmatched": 0,
+            "updated": 0
+          }
+        }
+      },
+      "qualityContext": {}
+    },
+    {
+      "package": {
+        "name": "pdf-brain",
+        "path": ""
+      },
+      "lens": {
+        "id": "typescript",
+        "command": "typecheck"
+      },
+      "execution": {
+        "success": true,
+        "exitCode": 1,
+        "duration": 760,
+        "timestamp": 1765761933448
+      },
+      "issues": [],
+      "metrics": {
+        "filesAnalyzed": 6,
+        "totalIssues": 0,
+        "issuesBySeverity": {
+          "error": 0,
+          "warning": 0,
+          "info": 0,
+          "hint": 0
+        },
+        "executionTime": 0,
+        "custom": {
+          "filesWithErrors": 0,
+          "totalErrors": 0,
+          "totalWarnings": 0,
+          "totalSuggestions": 0,
+          "uniqueErrorCodes": 0,
+          "topErrors": []
+        }
+      },
+      "fileMetrics": [],
+      "qualityContext": {}
+    }
+  ],
+  "qualityMetrics": {
+    "packages": [
+      {
+        "name": "pdf-brain",
+        "path": "",
+        "hexagon": {
+          "tests": 100,
+          "deadCode": 0,
+          "formatting": 0,
+          "linting": 0,
+          "types": 100,
+          "documentation": 0
+        }
+      }
+    ]
+  }
+}

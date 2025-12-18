@@ -12,7 +12,8 @@
     "dev": "bun run src/cli.ts",
     "test": "bun test",
     "typecheck": "tsc --noEmit",
-    "setup": "./scripts/setup.sh"
+    "setup": "./scripts/setup.sh",
+    "prepare": "husky"
   },
   "dependencies": {
     "@effect/platform": "^0.72.0",
@@ -23,6 +24,7 @@
   },
   "devDependencies": {
     "@types/bun": "latest",
+    "husky": "^9.1.7",
     "typescript": "^5.7.2"
   },
   "peerDependencies": {
